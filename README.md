@@ -1,3 +1,11 @@
+> **Fork status (2026-10-13):** this branch (`anthropic-support`) is
+> git-hulk's PR [#233](https://github.com/google/adk-go/pull/233) (adds
+> `model/anthropic`), rebased onto current upstream `main`. Upstream closed
+> #233 in favor of #598, which was itself closed as stale after review found
+> several correctness bugs and was never merged — so official Claude support
+> doesn't exist yet. Check [google/adk-go#225](https://github.com/google/adk-go/issues/225)
+> for progress; drop this fork once support lands upstream.
+
 # Agent Development Kit (ADK) for Go
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
