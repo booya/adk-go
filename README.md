@@ -1,3 +1,23 @@
+> **Fork status (2026-10-13):** this branch (`anthropic-support-v1.5.0`) is
+> git-hulk's PR [#233](https://github.com/google/adk-go/pull/233) (adds
+> `model/anthropic`), cherry-picked onto upstream tag `v1.5.0` — the exact
+> version `booya/agents` currently pins — not onto current upstream `main`.
+> `main` has drifted far past `v1.5.0` (hundreds of files changed: context
+> unification removed `agent.ToolContext`, dropped `skilltoolset`, reworked
+> telemetry, etc.), so rebasing onto `main` instead would also require
+> migrating `booya/agents`' tool code to the new APIs — out of scope here.
+>
+> Upstream itself never adopted Claude support: #233 was closed in favor of
+> PR #598, which was closed as stale after review found correctness bugs and
+> was never merged. See [google/adk-go#225](https://github.com/google/adk-go/issues/225)
+> for progress. Also see the `anthropic-support` branch here, which has the
+> same patch rebased onto current `main` instead (build-tested standalone,
+> but not compatible with `booya/agents` until it migrates past `v1.5.0`).
+>
+> To refresh: re-cherry-pick git-hulk's commits from
+> `git-hulk/adk-go@feature/anthropic-llm` onto whatever tag `booya/agents`
+> pins next, or check #225 for official support and drop this fork entirely.
+
 # Agent Development Kit (ADK) for Go
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
